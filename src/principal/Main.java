@@ -24,6 +24,7 @@ public class Main extends Canvas implements Runnable {
 		pant.setMaximumSize(new Dimension(1000, 800));
 		pant.setPreferredSize(new Dimension(1000, 800));
 
+		//Comentario de prueba
 		JFrame frame = new JFrame("LoLErillos");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
