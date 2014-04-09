@@ -13,6 +13,7 @@ public class Main {
 	private InputHandler inp = new InputHandler(this);
 	private Mapa _mapa = new Mapa(this);
 	private MainHilo hilo;
+	private Fps _fps = new Fps(this);
 
 	public void start() {
 		try {
@@ -54,6 +55,9 @@ public class Main {
 	}
 	public void setInp(InputHandler inp) {
 		this.inp = inp;
+	}
+	public Fps get_fps() {
+		return _fps;
 	}
 }
 
