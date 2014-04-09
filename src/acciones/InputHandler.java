@@ -54,6 +54,9 @@ public class InputHandler {
 				case Keyboard.KEY_D:
 					System.out.println("D soltada");
 					break;
+				case Keyboard.KEY_M:
+					m.getHilo().setDibu(!m.getHilo().getDibu());	
+					break;
 				}
 			}
 		}
