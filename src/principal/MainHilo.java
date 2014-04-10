@@ -1,5 +1,7 @@
 package principal;
 
+import java.io.IOException;
+
 import org.lwjgl.opengl.Display;
 
 public class MainHilo implements Runnable {
@@ -21,8 +23,14 @@ public class MainHilo implements Runnable {
 			
 			if (dibu_f)
 				m.get_mapa().dibujar_fondo();
-			else if (dibu_p)
-				m.get_mapa().dibujar_player();		
+			else if (dibu_p){
+				try {
+					m.get_mapa().dibujar_player();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}	
+			}
 		}
 
 	}

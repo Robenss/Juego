@@ -1,5 +1,7 @@
 package principal;
 
+import java.io.IOException;
+
 import objetos.Mapa;
 
 import org.lwjgl.LWJGLException;
@@ -10,14 +12,15 @@ import acciones.InputHandler;
 
 public class Main {
 
-	private InputHandler inp = new InputHandler(this);
 	private Mapa _mapa = new Mapa(this);
+	private InputHandler inp = new InputHandler(this);
 	private MainHilo hilo;
 	private Fps _fps = new Fps(this);
 
 	public void start() {
 		try {
 			Display.setDisplayMode(new DisplayMode(800,600));
+			Display.setFullscreen(true);
 			Display.create();
 			Display.setTitle("Proyecto Juego");
 		} catch (LWJGLException e) {
@@ -25,7 +28,12 @@ public class Main {
 			System.exit(0);
 		}
 
-		_mapa.ini(); // Matriz del mapa
+		try {
+			_mapa.ini();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // Matriz del mapa
 
 		hilo = new MainHilo(this);
 		hilo.run();

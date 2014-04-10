@@ -43,10 +43,10 @@ public class InputHandler {
 		}
 
 		_player.setO(_player.getO()+(0.15f * delta));
-		if (_player.getX() < 50) _player.setX(50);
-		if (_player.getX() > 750) _player.setX(750);
-		if (_player.getY() < 50) _player.setY(50);
-		if (_player.getY() > 550) _player.setY(550);
+		if (_player.getX() < 70) _player.setX(70);
+		if (_player.getX() > 730) _player.setX(730);
+		if (_player.getY() < 70) _player.setY(70);
+		if (_player.getY() > 530) _player.setY(530);
 
 		m.get_mapa().set_player(_player);
 		m.get_fps().updateFPS();

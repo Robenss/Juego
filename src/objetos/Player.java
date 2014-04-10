@@ -4,7 +4,7 @@ public class Player {
 
 	private float x = 400;
 	private float y = 300;
-	private float o = 0;
+	private float o = 180;
 	private int hp;
 	private int mp;
 	private int atk;
